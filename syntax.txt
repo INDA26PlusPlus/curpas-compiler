@@ -1,0 +1,32 @@
+<script> ::= <block> | <script> <block>
+<block> ::= <statement> | <block> <statement>
+<statement> ::= <init> "\n" | <add> "\n" | <div> "\n" | <pow> "\n" | <cut> "\n" | <show> "\n" | <if> | <while>
+
+<init> ::= "init" <numeric>
+<add> ::= "add" <address> <horizontal-dir> <add-symbol> | "add" <address> <horizontal-dir> <numeric>
+<pow> ::= "pow" <address> <vertical-dir>
+<div> ::= "div" <address> <vertical-dir> <div-symbol>
+<cut> ::= "cut" <address> | "cut" <address> <horizontal-dir>
+<show> ::= "show" <display>
+<while> ::= "while" <numeric> "\n" <indent+1> <block> <indent-1>
+<if> ::= "if" <numeric> "\n" <indent+1> <block> <indent-1>
+
+<numeric> ::= "n" | <float> | "φ" | "π" | "e" | <query>
+<query> ::= "has" <numeric> | "missing" <numeric>
+<float> ::= <number> | <number> "." <number>
+<number> ::= <digit> | <number> <digit>
+<digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<address> ::= "[" <series> "]" | "[" "]"
+<series> ::= <number> | <series> "," <number>
+
+<vertical-dir> ::= "u" | "d"
+<horizontal-dir> ::= "l" | "r"
+
+<add-symbol> ::= "+" | "±" | "-" | "*" | "!" | "√" | "(" | ")"
+<div-symbol> ::= "×" | "/"
+
+<indent+1> ::= INDENT_INCREMENT
+<indent-1> ::= INDENT_DECREMENT
+
+// I don't know how to explain indentation levels in bnf

@@ -1,0 +1,22 @@
+init φ
+pow [] u
+add [1] r n
+show exp
+show eval
+div [] d /
+add [1] r √
+add [1] r 5
+show exp
+show eval
+add [0] r -
+add [0,1] r 1
+add [0,2] r -
+add [0,3] r φ
+add [0,2] l (
+add [0] r )
+show exp
+show eval
+pow [0,2] u
+add [0,2,1] r n
+show exp
+show eval

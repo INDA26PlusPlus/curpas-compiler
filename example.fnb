@@ -1,0 +1,25 @@
+init n
+show exp
+while missing 576
+    add [] r +
+    add [] r n
+    if has 24
+        add [] r )
+        add [] l (
+    if missing 576
+        add [] r )
+        add [] l (
+    if has 24
+        pow [] u
+        add [1] r 2
+    if missing 576
+        add [] r *
+        add [] r 3
+    if missing 576
+        cut [1]
+        cut [1]
+        cut [] r
+        cut [0]
+        show exp
+show exp
+show eval
